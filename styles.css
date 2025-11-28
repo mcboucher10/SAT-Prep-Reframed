@@ -1,0 +1,227 @@
+:root {
+  --navbar-color: #f3f3f3;
+  --navbar-text-color: #444444;
+  --navbar-hover-color: #a3a3a3;
+  --button-color: #f3f3f3;
+  --button-text-color: #444444;
+  --button-hover-color: #a3a3a3;
+  --section-one-color: #9c9c9c;
+  --section-two-color: #bfbfbf;
+}
+
+/* Page reset and typography */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+ul.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: var(--navbar-color);
+  justify-content: center;
+}
+
+ul.navbar li a {
+  display: block;
+  color: var(--navbar-text-color);
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.navbar li a:hover {
+  background-color: var(--navbar-hover-color);
+}
+
+/* active nav link style */
+ul.navbar li a.active {
+  background-color: var(--navbar-hover-color);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Headings */
+h1, h2 {
+  margin: 8px 0px;
+  padding: 0px 10px;
+}
+
+h1 {
+  padding-top: 60px; /* accounts for fixed navbar */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Generic container */
+.container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+/* Buttons */
+a.button {
+  background-color: var(--button-color);
+  border: none;
+  color: var(--button-text-color);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+a.button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Home images */
+img.home {
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 300px;
+  height: auto;
+}
+
+/* Sections */
+div.one {
+  background-color: var(--section-one-color);
+  margin: 0;
+  padding: 10px 0;
+}
+
+div.two {
+  background-color: var(--section-two-color);
+  margin: 0;
+  padding: 10px 0;
+}
+
+/* Book block */
+.book-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+.book-container img {
+  width: 300px;
+  height: auto;
+}
+
+.book-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book-text p {
+  margin: 0;
+}
+
+.book-text a.button {
+  align-self: flex-start;
+}
+
+/* Author block */
+.author-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+.author-container img {
+  width: 300px;
+  height: auto;
+}
+
+/* Essentials (2x2 grid) */
+ul.essentials {
+  list-style-type: none;
+  padding: 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  gap: 12px;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Contact two-column layout */
+.contact-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.contact-info {
+  width: 320px;
+}
+
+.contact-info ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.contact-info p {
+  margin: 6px 0;
+}
+
+.contact-text {
+  flex: 1;
+}
+
+/* "Looking for more?" buttons: side-by-side and styled */
+.more-container {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.more-container a.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  width: 140px;
+  height: 100px;
+  background-color: var(--button-color);
+  color: var(--button-text-color);
+  text-decoration: none;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.more-container a.button img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* smooth scrolling for anchor clicks */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ensure anchored sections are offset below the fixed navbar */
+[id] {
+  scroll-margin-top: 70px; /* adjust if navbar height changes */
+}
