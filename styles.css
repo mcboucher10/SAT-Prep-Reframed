@@ -42,8 +42,6 @@ ul.navbar li a:hover {
 /* active nav link style */
 ul.navbar li a.active {
   background-color: var(--navbar-hover-color);
-  color: #fff;
-  font-weight: 600;
 }
 
 /* Headings */
